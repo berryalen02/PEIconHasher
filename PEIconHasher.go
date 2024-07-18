@@ -28,11 +28,14 @@ func CalculateHash(data []byte) string {
 }
 
 func main() {
+	fmt.Println("______ _____ _____                _   _           _               \n| ___ \\  ___|_   _|              | | | |         | |              \n| |_/ / |__   | |  ___ ___  _ __ | |_| | __ _ ___| |__   ___ _ __ \n|  __/|  __|  | | / __/ _ \\| '_ \\|  _  |/ _` / __| '_ \\ / _ \\ '__|\n| |   | |___ _| || (_| (_) | | | | | | | (_| \\__ \\ | | |  __/ |   \n\\_|   \\____/ \\___/\\___\\___/|_| |_\\_| |_/\\__,_|___/_| |_|\\___|_|   \n                                                                  \n                                                                  ")
+	fmt.Println("Link: https://github.com/berryalen02/PEIconHasher")
+
 	peFilePath := flag.String("f", "", "需要更改ico hash的PE文件")
 	flag.Parse()
 
 	if *peFilePath == "" {
-		fmt.Println("Usage: <path_to_pe_file>")
+		fmt.Println("Usage: -f <path_to_pe_file>")
 		return
 	}
 
